@@ -1,0 +1,57 @@
+{
+  "name": "t-rex",
+  "project_id": {
+    "linux": "1",
+    "windows": "50"
+  },
+  "executables": {
+    "windows": "t-rex.exe",
+    "linux": "t-rex"
+  },
+  "pool_protocol": {
+    "tcp": "stratum+tcp://",
+    "tls": "stratum+ssl://"
+  },
+  "arguments": "$ALGO -o %pool_protocol%%pool_server%:%pool_port% -u %user% -p %password% --api-bind-http 127.0.0.1:%api_port% --exit-on-cuda-error --exit-on-connection-lost --validate-shares",
+  "multi_coin": true,
+  "platforms": [
+    "nvidia"
+  ],
+  "api_protocols": [
+    "t-rex"
+  ],
+  "api_port": 4028,
+  "coins": {
+    "GTM": "-a lyra2z",
+    "ZANO": "-a progpowz",
+    "GIN": "-a x16rt",
+    "ALPH": "-a blake3",
+    "FIRO": "-a firopow",
+    "BCD": "-a bcd",
+    "CFX": "-a octopus",
+    "LUX": "-a phi2",
+    "GRV": "-a x16r",
+    "XMN": "-a x16r",
+    "PGN": "-a x21s",
+    "DNR": "-a tribus",
+    "RVN": "-a kawpow",
+    "AIPG": "-a kawpow",
+    "XNA": "-a kawpow",
+    "CLORE": "-a kawpow",
+    "NEOX": "-a kawpow",
+    "SUQA": "-a x22i",
+    "ETH": "-a ethash",
+    "ETC": "-a etchash",
+    "VBK": "-a progpow-veriblock",
+    "VEIL": "-a progpow-veil",
+    "ERG": "-a autolykos2"
+  },
+  "override_arguments": [
+    {
+      "coins": [
+        "ALPH"
+      ],
+      "value": "$ALGO -o %pool_protocol%%pool_server%:%pool_port% -u %wallet_address% -p %password% --worker %rig_name%%miner_id% --api-bind-http 127.0.0.1:%api_port% --exit-on-cuda-error --exit-on-connection-lost --validate-shares"
+    }
+  ]
+}

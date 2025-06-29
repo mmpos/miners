@@ -1,0 +1,51 @@
+{
+  "name": "wildrig-multi",
+  "project_id": {
+    "linux": "18",
+    "windows": "51"
+  },
+  "executables": {
+    "windows": "wildrig.exe",
+    "linux": "wildrig-multi"
+  },
+  "pool_protocol": {
+    "tcp": "stratum+tcp://",
+    "tls": "stratum+tcps://"
+  },
+  "arguments": "$ALGO -o %pool_protocol%%pool_server%:%pool_port% -u %user% -p %password% --api-port=%api_port%",
+  "platforms": [
+    "amd_adl",
+    "amd_sysfs",
+    "nvidia",
+    "intel_sysfs"
+  ],
+  "api_protocols": [
+    "xmrstak",
+    "wildrig"
+  ],
+  "api_port": 4028,
+  "coins": {
+    "QUAI": "-a progpow-quai",
+    "PLSR": "-a curvehash",
+    "RXD": "-a sha512256d",
+    "EVR": "-a evrprogpow",
+    "TLS": "-a progpow-telestai",
+    "NEXA": "-a nexapow",
+    "BBR": "-a wildkeccak",
+    "GRV": "-a x16r",
+    "XMN": "-a x16r",
+    "BSD": "-a xevan",
+    "GIN": "-a x16rt",
+    "BCD": "-a bcd",
+    "PGN": "-a x21s",
+    "DNR": "-a tribus",
+    "SUQA": "-a x22i",
+    "RVN": "-a kawpow",
+    "CLORE": "-a kawpow",
+    "NEOX": "-a kawpow",
+    "ZANO": "-a progpowz",
+    "SERO": "-a progpow-sero",
+    "VEIL": "-a progpow-veil",
+    "RTM": "-a ghostrider"
+  }
+}

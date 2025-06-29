@@ -1,0 +1,69 @@
+{
+  "name": "XMR-Stak",
+  "project_id": {
+    "linux": "85",
+    "windows": "86"
+  },
+  "executables": {
+    "windows": "xmr-stak-rx.exe",
+    "linux": "xmr-stak-rx"
+  },
+  "pool_protocol": {
+    "tcp": "-o ",
+    "tls": "-O "
+  },
+  "arguments": "$ALGO $VARIANTS %pool_protocol%%pool_server%:%pool_port% -u %user% -r %rig_name% -p %password% -i %api_port% --noTest",
+  "platforms": [],
+  "api_protocols": [
+    "xmrstak"
+  ],
+  "api_port": 4028,
+  "coins": {
+    "XMR": "--currency monero",
+    "XTM": "--currency monero",
+    "QRL": "--currency monero",
+    "ZEPH": "--currency monero",
+    "SAL": "--currency monero",
+    "LOKI": "--currency loki --noAMD --noNVIDIA"
+  },
+  "override_platforms": [
+    {
+      "coins": [
+        "LOKI"
+      ],
+      "values": [
+        "cpu_amd",
+        "cpu_intel"
+      ]
+    }
+  ],
+  "variants": [
+    {
+      "coins": [
+        "XMR",
+        "XTM",
+        "QRL",
+        "ZEPH",
+        "SAL"
+      ],
+      "arguments": {
+        "cpu": "--noAMD --noNVIDIA",
+        "amd": "--noCPU --noNVIDIA",
+        "nvidia": "--noCPU --noAMD"
+      },
+      "platforms": {
+        "cpu": [
+          "cpu_amd",
+          "cpu_intel"
+        ],
+        "amd": [
+          "amd_adl",
+          "amd_sysfs"
+        ],
+        "nvidia": [
+          "nvidia"
+        ]
+      }
+    }
+  ]
+}

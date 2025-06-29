@@ -1,0 +1,96 @@
+{
+  "name": "Nanopool NanoMiner",
+  "project_id": {
+    "windows": "63",
+    "linux": "34"
+  },
+  "executables": {
+    "windows": "cmdline_launcher.bat",
+    "linux": "cmdline_launcher.sh"
+  },
+  "pool_protocol": {
+    "tcp": ""
+  },
+  "arguments": "$ALGO -noLog true -memTweak 0 -mport -%api_port% -webPort 0 -wallet %wallet_address% -rigName %rig_name%%miner_id% -pool1 %pool_server%:%pool_port%",
+  "platforms": [
+    "nvidia",
+    "amd_adl",
+    "amd_sysfs"
+  ],
+  "api_protocols": [
+    "claymore-ethash-v1",
+    "claymore-ethash-v2"
+  ],
+  "api_port": 3333,
+  "coins": {
+    "ETH": "-coin eth",
+    "IRON": "-algo fishhash",
+    "RTH": "-algo EthashB3",
+    "HYP": "-algo EthashB3",
+    "ERG": "-coin ergo",
+    "CFX": "-coin cfx",
+    "RVN": "-coin rvn",
+    "ETC": "-coin etc",
+    "UBQ": "-coin ubq",
+    "FIRO": "-coin firo",
+    "VTC": "-coin vtc"
+  },
+  "override_platforms": [
+    {
+      "coins": [
+        "ETH",
+        "ETC",
+        "UBQ"
+      ],
+      "values": [
+        "nvidia",
+        "amd_adl",
+        "amd_sysfs",
+        "intel_sysfs"
+      ]
+    },
+    {
+      "coins": [
+        "CFX"
+      ],
+      "values": [
+        "nvidia"
+      ]
+    },
+    {
+      "coins": [
+        "RVN"
+      ],
+      "values": [
+        "amd_adl",
+        "amd_sysfs"
+      ]
+    }
+  ],
+  "override_arguments": [
+    {
+      "coins": [
+        "ERG",
+        "CFX",
+        "RVN",
+        "FIRO",
+        "VTC"
+      ],
+      "value": "$ALGO -noLog true -memTweak 0 -mport -%api_port% -webPort 0 -wallet %user% -rigName %rig_name%%miner_id% -pool1 %pool_server%:%pool_port%"
+    }
+  ],
+  "override_api_protocols": [
+    {
+      "coins": [
+        "ERG",
+        "FIRO",
+        "UBQ",
+        "VTC"
+      ],
+      "values": [
+        "claymore-zec-v1",
+        "claymore-zec-v2"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "name": "onezerominer",
+  "project_id": {
+    "linux": "139",
+    "windows": "138"
+  },
+  "executables": {
+    "windows": "onezerominer.exe",
+    "linux": "onezerominer"
+  },
+  "arguments": "$ALGO -w %wallet_address% -o %pool_protocol%%pool_server%:%pool_port% -p %rig_name% --api-host 127.0.0.1 --api-port %api_port%",
+  "special_coins": [
+    "ZIL"
+  ],
+  "platforms": [
+    "amd_adl",
+    "amd_sysfs",
+    "nvidia"
+  ],
+  "api_protocols": [
+    "onezerominer"
+  ],
+  "api_port": 3333,
+  "coins": {
+    "DNX": "-a dynex",
+    "XEL": "-a xelis"
+  },
+  "override_arguments": [
+    {
+      "coins": [
+        "XEL"
+      ],
+      "value": "$ALGO -w %wallet_address% -o %pool_protocol%%pool_server%:%pool_port% --worker %rig_name%%miner_id% --api-host 127.0.0.1 --api-port %api_port%"
+    }
+  ]
+}

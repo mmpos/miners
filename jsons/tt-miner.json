@@ -1,0 +1,71 @@
+{
+  "name": "TT-Miner",
+  "project_id": {
+    "linux": "74",
+    "windows": "64"
+  },
+  "executables": {
+    "windows": "TT-Miner.exe",
+    "linux": "TT-Miner"
+  },
+  "pool_protocol": {
+    "tcp": "stratum+tcp://",
+    "tls": "stratum+ssl://"
+  },
+  "arguments": "$ALGO -luck -P %pool_protocol%%user%:%password%@%pool_server%:%pool_port% --api-bind 127.0.0.1:%api_port%",
+  "multi_coin": true,
+  "special_coins": [
+    "ZIL"
+  ],
+  "platforms": [
+    "nvidia"
+  ],
+  "api_protocols": [
+    "tt-miner"
+  ],
+  "api_port": 4028,
+  "coins": {
+    "XEL": "-c XEL",
+    "RTM": "-c RTM",
+    "SPR": "-c SPR",
+    "KCN": "-a flex",
+    "NEOX": "-c NEOX",
+    "MEWC": "-c MEWC",
+    "ALPH": "-c ALPH",
+    "EVR": "-c EVR",
+    "RTH": "-c RTH",
+    "HYP": "-c RTH",
+    "RXD": "-c RXD",
+    "ETH": "-c ETH",
+    "ETC": "-c ETC",
+    "UBQ": "-c UBQ",
+    "SERO": "-c SERO",
+    "ZANO": "-c ZANO",
+    "RVN": "-c RVN",
+    "IRON": "-c IRON"
+  },
+  "override_platforms": [
+    {
+      "coins": [
+        "XEL",
+        "SPR",
+        "KCN"
+      ],
+      "values": [
+        "cpu_amd",
+        "cpu_intel"
+      ]
+    }
+  ],
+  "override_pool_protocol": [
+    {
+      "coins": [
+        "IRON"
+      ],
+      "value": {
+        "tcp": "",
+        "tls": "ssl://"
+      }
+    }
+  ]
+}

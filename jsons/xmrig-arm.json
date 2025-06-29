@@ -1,0 +1,27 @@
+{
+  "name": "XMRig",
+  "project_id": {
+    "linux": "161"
+  },
+  "executables": {
+    "windows": "xmrig.exe",
+    "linux": "xmrig"
+  },
+  "pool_protocol": {
+    "tcp": "",
+    "tls": "--tls"
+  },
+  "arguments": "%pool_protocol% -o %pool_server%:%pool_port% -u %user% -p %password% --donate-level=1 --http-enabled --http-port %api_port% --rig-id %rig_name% --no-color",
+  "platforms": [
+    "cpu_arm64"
+  ],
+  "api_protocols": [
+    "xmrig"
+  ],
+  "api_port": 4030,
+  "coins": {
+    "XMR": "",
+    "XTM": "",
+    "ZEPH": ""
+  }
+}

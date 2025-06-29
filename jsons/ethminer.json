@@ -1,0 +1,49 @@
+{
+  "name": "ethminer by ethminer-mining community",
+  "project_id": {
+    "linux": "11",
+    "windows": "62"
+  },
+  "executables": {
+    "windows": "ethminer.exe",
+    "linux": "ethminer"
+  },
+  "pool_protocol": {
+    "tcp": "stratum://",
+    "tls": "stratums://"
+  },
+  "arguments": "$ALGO $VARIANTS --report-hashrate --HWMON 0 -P %pool_protocol%%user%:%password%@%pool_server%:%pool_port% --api-bind 127.0.0.1:%api_port%",
+  "platforms": [
+    "nvidia",
+    "amd_adl",
+    "amd_sysfs"
+  ],
+  "api_protocols": [
+    "claymore-ethash-v1",
+    "ethminer"
+  ],
+  "api_port": 3333,
+  "coins": {
+    "ETH": ""
+  },
+  "variants": [
+    {
+      "coins": [
+        "ETH"
+      ],
+      "arguments": {
+        "amd": "-G",
+        "nvidia": "-U"
+      },
+      "platforms": {
+        "amd": [
+          "amd_adl",
+          "amd_sysfs"
+        ],
+        "nvidia": [
+          "nvidia"
+        ]
+      }
+    }
+  ]
+}

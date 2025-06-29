@@ -1,0 +1,32 @@
+{
+  "name": "TBMiner",
+  "project_id": {
+    "linux": "118",
+    "windows": "117"
+  },
+  "executables": {
+    "windows": "TBMiner.exe",
+    "linux": "TBMiner"
+  },
+  "pool_protocol": {
+    "tcp": "--port",
+    "tls": "-s --ssl-port"
+  },
+  "arguments": "$ALGO --hostname %pool_server% %pool_protocol% %pool_port% --wallet %wallet_address% --worker-name %rig_name%%miner_id% --api --api-ip 127.0.0.1 --api-port %api_port%",
+  "platforms": [
+    "nvidia",
+    "amd_adl",
+    "amd_sysfs"
+  ],
+  "api_protocols": [
+    "teamblackminer"
+  ],
+  "api_port": 4068,
+  "coins": {
+    "VTC": "--algo verthash",
+    "NEOX": "--algo kawpow",
+    "ETH": "--algo ethash",
+    "RTH": "--algo ethashb3",
+    "ETC": "--algo etchash"
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "name": "NBMiner",
+  "project_id": {
+    "linux": "38",
+    "windows": "55"
+  },
+  "executables": {
+    "windows": "nbminer.exe",
+    "linux": "nbminer"
+  },
+  "pool_protocol": {
+    "tcp": "stratum+tcp://",
+    "tls": "stratum+ssl://"
+  },
+  "arguments": "$ALGO -o %pool_protocol%%pool_server%:%pool_port% -u %user%:%password% --api 127.0.0.1:%api_port%",
+  "platforms": [
+    "nvidia"
+  ],
+  "api_protocols": [
+    "nbminer"
+  ],
+  "api_port": 4029,
+  "coins": {
+    "BTM": "-a tensority",
+    "ERG": "-a ergo",
+    "CFX": "-a octopus",
+    "RVN": "-a kawpow",
+    "NEOX": "-a kawpow",
+    "HNS": "-a hns",
+    "ETH": "-a ethash",
+    "ETC": "-a etchash",
+    "GRIN": "-a cuckarood",
+    "MWC": "-a cuckarood",
+    "AE": "-a cuckoo_ae",
+    "XWP": "-a cuckaroo_swap",
+    "SERO": "-a progpow_sero",
+    "CKB": "-a eaglesong"
+  },
+  "override_platforms": [
+    {
+      "coins": [
+        "ERG",
+        "RVN",
+        "NEOX",
+        "ETH",
+        "ETC",
+        "CKB"
+      ],
+      "values": [
+        "nvidia",
+        "amd_adl",
+        "amd_sysfs"
+      ]
+    }
+  ],
+  "override_arguments": [
+    {
+      "coins": [
+        "ETH",
+        "ETC"
+      ],
+      "value": "$ALGO -o %pool_protocol%%pool_server%:%pool_port% -u %user% -p %password% --api 127.0.0.1:%api_port%"
+    }
+  ],
+  "override_pool_protocol": [
+    {
+      "coins": [
+        "ETH"
+      ],
+      "value": {
+        "tcp": "ethproxy+tcp://",
+        "tls": "ethproxy+ssl://"
+      }
+    }
+  ]
+}

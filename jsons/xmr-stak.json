@@ -1,0 +1,29 @@
+{
+  "name": "XMR-Stak",
+  "project_id": {
+    "linux": "22",
+    "windows": "58"
+  },
+  "executables": {
+    "windows": "xmr-stak.exe",
+    "linux": "xmr-stak"
+  },
+  "pool_protocol": {
+    "tcp": "-o ",
+    "tls": "-O "
+  },
+  "arguments": "$ALGO --noCPU %pool_protocol%%pool_server%:%pool_port% -u %user% -r %rig_name% -p %password% -i %api_port%",
+  "platforms": [
+    "nvidia",
+    "amd_adl",
+    "amd_sysfs"
+  ],
+  "api_protocols": [
+    "xmrstak"
+  ],
+  "api_port": 4028,
+  "coins": {
+    "CCX": "--currency ryo",
+    "RYO": "--currency ryo"
+  }
+}

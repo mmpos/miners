@@ -1,0 +1,37 @@
+{
+  "name": "CryptoDredge",
+  "project_id": {
+    "linux": "2",
+    "windows": "47"
+  },
+  "executables": {
+    "windows": "CryptoDredge.exe",
+    "linux": "CryptoDredge"
+  },
+  "pool_protocol": {
+    "tcp": "stratum+tcp://"
+  },
+  "arguments": "$ALGO -o %pool_protocol%%pool_server%:%pool_port% -u %user% -p %password% --api-bind 127.0.0.1:%api_port% --no-nvml",
+  "platforms": [
+    "nvidia"
+  ],
+  "api_protocols": [
+    "ccminer"
+  ],
+  "api_port": 4068,
+  "coins": {
+    "XVG": "-a blake2s",
+    "CCX": "-a cngpu",
+    "TRTL": "-a chukwa2",
+    "BCD": "-a bcd",
+    "GIN": "-a x16rt",
+    "GTM": "-a lyra2z",
+    "FTC": "-a neoscrypt",
+    "LUX": "-a phi2",
+    "DNR": "-a tribus",
+    "MSR": "-a cnfast2",
+    "XTL": "-a cnfast2",
+    "NIM": "-a argon2d-nim",
+    "XHV": "-a cnhaven"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "name": "hashreactor",
+  "project_id": {
+    "linux": "171"
+  },
+  "executables": {
+    "windows": "hashreactor.exe",
+    "linux": "hashreactor"
+  },
+  "pool_protocol": {
+    "tcp": "stratum+tcp://"
+  },
+  "arguments": "--user \"%user%\" --pool \"%pool_server%:%pool_port%\" --reflash true --default-clock 300 --default-max-temp 80",
+  "platforms": [
+    "fpga_unkn",
+    "fpga_unkn_xilinx",
+    "fpga_unkn_bittware",
+    "fpga_vu13p",
+    "fpga_vu35p",
+    "fpga_vu33p",
+    "fpga_vu9p"
+  ],
+  "api_protocols": [
+    "miner-script"
+  ],
+  "api_port": 0,
+  "coins": {
+    "XTM": ""
+  }
+}

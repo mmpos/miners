@@ -1,0 +1,45 @@
+{
+  "name": "miniZ",
+  "project_id": {
+    "linux": "40",
+    "windows": "48"
+  },
+  "executables": {
+    "windows": "miniZ.exe",
+    "linux": "miniZ"
+  },
+  "pool_protocol": {
+    "tcp": "",
+    "tls": "ssl://"
+  },
+  "arguments": "$ALGO --url %pool_protocol%%user%@%pool_server%:%pool_port% --pass %password% --telemetry 127.0.0.1:%api_port% --nocolor",
+  "platforms": [
+    "nvidia",
+    "amd_adl",
+    "amd_sysfs"
+  ],
+  "api_protocols": [
+    "miniz"
+  ],
+  "api_port": 4029,
+  "coins": {
+    "ANON": "--pers auto",
+    "BTCZ": "--pers auto",
+    "XSG": "--pers auto",
+    "BTG": "--pers auto",
+    "MEWC": "--par=progpow --pers=mewc",
+    "TLS": "--par=meraki",
+    "RVN": "--par=kawpow",
+    "NEOX": "--par=kawpow",
+    "ETC": "--par=etchash",
+    "ETH": "--par=ethash",
+    "SAFE": "--par=192,7 --pers Safecoin",
+    "BEAM": "--par=144,5s",
+    "AION": "--par=210,9",
+    "ZER": "--par=192,7 --pers ZERO_PoW",
+    "ZEL": "--par=125,4",
+    "FLUX": "--par=125,4",
+    "GENX": "--par=192,7 --pers GENX_PoW",
+    "YEC": "--par=192,7 --pers YCASH_PoW"
+  }
+}

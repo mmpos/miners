@@ -1,0 +1,42 @@
+{
+  "name": "VerthashMiner",
+  "project_id": {
+    "linux": "107"
+  },
+  "executables": {
+    "windows": "VerthashMiner.exe",
+    "linux": "VerthashMiner"
+  },
+  "pool_protocol": {
+    "tcp": "stratum+tcp://"
+  },
+  "arguments": "$ALGO -o %pool_protocol%%pool_server%:%pool_port% -u %user% -p %password% --verthash-data /home/miner/verthash.dat $VARIANTS",
+  "platforms": [],
+  "api_protocols": [
+    "miner-script"
+  ],
+  "api_port": 0,
+  "coins": {
+    "VTC": ""
+  },
+  "variants": [
+    {
+      "coins": [
+        "VTC"
+      ],
+      "arguments": {
+        "amd": "--all-cl-devices",
+        "nvidia": "--all-cu-devices"
+      },
+      "platforms": {
+        "amd": [
+          "amd_adl",
+          "amd_sysfs"
+        ],
+        "nvidia": [
+          "nvidia"
+        ]
+      }
+    }
+  ]
+}

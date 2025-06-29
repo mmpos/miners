@@ -1,0 +1,47 @@
+{
+  "name": "Apool.io",
+  "project_id": {
+    "linux": "164"
+  },
+  "executables": {
+    "windows": "apoolminer.exe",
+    "linux": "apoolminer"
+  },
+  "pool_protocol": {
+    "tcp": "",
+    "tls": ""
+  },
+  "arguments": "$ALGO --account %wallet_address% --pool %pool_server%:%pool_port% --rest $VARIANTS",
+  "platforms": [
+    "nvidia",
+    "cpu_amd",
+    "cpu_intel"
+  ],
+  "api_protocols": [
+    "miner-script"
+  ],
+  "api_port": 0,
+  "coins": {
+    "QUBIC": "--algo qubic"
+  },
+  "variants": [
+    {
+      "coins": [
+        "QUBIC"
+      ],
+      "arguments": {
+        "cpu": "--gpu-off",
+        "gpu": "--cpu-off"
+      },
+      "platforms": {
+        "cpu": [
+          "cpu_amd",
+          "cpu_intel"
+        ],
+        "gpu": [
+          "nvidia"
+        ]
+      }
+    }
+  ]
+}

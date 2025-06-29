@@ -1,0 +1,80 @@
+{
+  "name": "XMRig",
+  "project_id": {
+    "linux": "76",
+    "windows": "82"
+  },
+  "executables": {
+    "windows": "xmrig.exe",
+    "linux": "xmrig"
+  },
+  "pool_protocol": {
+    "tcp": "",
+    "tls": "--tls"
+  },
+  "arguments": "$ALGO $VARIANTS %pool_protocol% -o %pool_server%:%pool_port% -u %user% -p %password% --donate-level=1 --http-enabled --http-port %api_port% --rig-id %rig_name% --no-color",
+  "platforms": [
+    "cpu_amd",
+    "cpu_intel"
+  ],
+  "api_protocols": [
+    "xmrig"
+  ],
+  "api_port": 4030,
+  "coins": {
+    "XMR": "-a rx/0",
+    "XTM": "-a rx/0",
+    "QRL": "-a rx/0",
+    "ZEPH": "-a rx/0",
+    "SAL": "-a rx/0",
+    "XHV": "-a cn-heavy/xhv",
+    "KEVA": "-a rx/keva",
+    "CCX": "-a cn/gpu",
+    "RYO": "-a cn/gpu",
+    "TRTL": "-a argon2/chukwav2",
+    "SUMO": "-a cn/r",
+    "LOKI": "-a rx/loki",
+    "UPX": "-a cn/upx2",
+    "RTM": "-a gr"
+  },
+  "override_platforms": [
+    {
+      "coins": [
+        "CCX",
+        "RYO",
+        "SUMO"
+      ],
+      "values": []
+    }
+  ],
+  "variants": [
+    {
+      "coins": [
+        "XMR",
+        "XTM",
+        "QRL",
+        "ZEPH",
+        "SAL",
+        "XHV",
+        "CCX",
+        "RYO",
+        "TRTL",
+        "SUMO",
+        "UPX"
+      ],
+      "arguments": {
+        "amd": "--no-cpu --opencl",
+        "nvidia": "--no-cpu --cuda"
+      },
+      "platforms": {
+        "amd": [
+          "amd_adl",
+          "amd_sysfs"
+        ],
+        "nvidia": [
+          "nvidia"
+        ]
+      }
+    }
+  ]
+}

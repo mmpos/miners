@@ -1,0 +1,25 @@
+{
+  "name": "qubic-cpu",
+  "project_id": {
+    "linux": "142"
+  },
+  "executables": {
+    "windows": "start_qubic.exe",
+    "linux": "start_qubic.sh"
+  },
+  "pool_protocol": {
+    "tcp": ""
+  },
+  "arguments": "--server %pool_server% --accesstoken %wallet_address% --cpu-threads 2 --rigid %rig_name%%miner_id%",
+  "platforms": [
+    "cpu_amd",
+    "cpu_intel"
+  ],
+  "api_protocols": [
+    "miner-script"
+  ],
+  "api_port": 0,
+  "coins": {
+    "QUBIC": ""
+  }
+}
