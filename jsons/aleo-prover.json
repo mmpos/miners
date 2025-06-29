@@ -1,0 +1,24 @@
+{
+  "name": "aleo-prover",
+  "project_id": {
+    "linux": "151"
+  },
+  "executables": {
+    "windows": "aleo_prover.exe",
+    "linux": "aleo_prover"
+  },
+  "pool_protocol": {
+    "tcp": ""
+  },
+  "arguments": "--pool %pool_server%:%pool_port% --address %wallet_address% --custom_name %rig_name%%miner_id%",
+  "platforms": [
+    "nvidia"
+  ],
+  "api_protocols": [
+    "miner-script"
+  ],
+  "api_port": 0,
+  "coins": {
+    "ALEO": ""
+  }
+}

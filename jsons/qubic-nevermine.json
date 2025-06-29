@@ -1,0 +1,49 @@
+{
+  "name": "QPRO",
+  "project_id": {
+    "linux": "165"
+  },
+  "executables": {
+    "windows": "start_qubic.bat",
+    "linux": "start_qubic.sh"
+  },
+  "pool_protocol": {
+    "tcp": "",
+    "tls": ""
+  },
+  "arguments": "--worker %rig_name%%miner_id% --wallet %wallet_address% $VARIANTS",
+  "platforms": [],
+  "api_protocols": [
+    "miner-script"
+  ],
+  "api_port": 0,
+  "coins": {
+    "QUBIC": ""
+  },
+  "variants": [
+    {
+      "coins": [
+        "QUBIC"
+      ],
+      "arguments": {
+        "cpu": "--cpu",
+        "nvidia": "--gpu",
+        "both": "--dual"
+      },
+      "platforms": {
+        "cpu": [
+          "cpu_amd",
+          "cpu_intel"
+        ],
+        "nvidia": [
+          "nvidia"
+        ],
+        "both": [
+          "nvidia",
+          "cpu_amd",
+          "cpu_intel"
+        ]
+      }
+    }
+  ]
+}

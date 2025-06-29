@@ -1,0 +1,49 @@
+{
+  "name": "Qubic client",
+  "project_id": {
+    "linux": "155"
+  },
+  "executables": {
+    "windows": "start_qubic.bat",
+    "linux": "start_qubic.sh"
+  },
+  "pool_protocol": {
+    "tcp": "ws://",
+    "tls": "wss://"
+  },
+  "arguments": "--server %pool_protocol%%pool_server% --accesstoken %wallet_address% --rigid %rig_name%%miner_id% $VARIANTS --pplns",
+  "platforms": [],
+  "api_protocols": [
+    "miner-script"
+  ],
+  "api_port": 0,
+  "coins": {
+    "QUBIC": ""
+  },
+  "variants": [
+    {
+      "coins": [
+        "QUBIC"
+      ],
+      "arguments": {
+        "cpu": "--cpu --cpu-threads $(nproc)",
+        "nvidia": "--gpu",
+        "both": "--gpu --cpu --cpu-threads $(nproc)"
+      },
+      "platforms": {
+        "cpu": [
+          "cpu_amd",
+          "cpu_intel"
+        ],
+        "nvidia": [
+          "nvidia"
+        ],
+        "both": [
+          "nvidia",
+          "cpu_amd",
+          "cpu_intel"
+        ]
+      }
+    }
+  ]
+}

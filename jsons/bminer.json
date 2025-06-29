@@ -1,0 +1,58 @@
+{
+  "name": "Bminer",
+  "project_id": {
+    "linux": "3",
+    "windows": "45"
+  },
+  "executables": {
+    "windows": "bminer.exe",
+    "linux": "bminer"
+  },
+  "pool_protocol": {
+    "tcp": "://",
+    "tls": "+ssl://"
+  },
+  "arguments": "-uri $ALGO%pool_protocol%%user%:%password%@%pool_server%:%pool_port% -api 127.0.0.1:%api_port%",
+  "multi_coin": true,
+  "platforms": [
+    "nvidia"
+  ],
+  "api_protocols": [
+    "bminer"
+  ],
+  "api_port": 4029,
+  "coins": {
+    "ZEC": "stratum",
+    "CFX": "conflux",
+    "GRIN": "cuckatoo32",
+    "MWC": "cuckatoo31",
+    "AE": "aeternity",
+    "ETH": "ethash",
+    "BTG": "aeternity",
+    "BTCZ": "zhash",
+    "BTM": "tensority",
+    "BEAM": "beam",
+    "SAFE": "equihash1445",
+    "XSG": "equihash1445",
+    "RVN": "raven",
+    "NEOX": "raven",
+    "SERO": "sero"
+  },
+  "override_platforms": [
+    {
+      "coins": [
+        "GRIN",
+        "MWC",
+        "ETH",
+        "BEAM",
+        "SAFE",
+        "XSG"
+      ],
+      "values": [
+        "nvidia",
+        "amd_adl",
+        "amd_sysfs"
+      ]
+    }
+  ]
+}

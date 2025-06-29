@@ -1,0 +1,52 @@
+{
+  "name": "XMRig-Mo",
+  "project_id": {
+    "linux": "83"
+  },
+  "executables": {
+    "windows": "xmrig.exe",
+    "linux": "xmrig"
+  },
+  "pool_protocol": {
+    "tcp": "",
+    "tls": "--tls"
+  },
+  "arguments": "%pool_protocol% -o %pool_server%:%pool_port% -u %user% -p %password% --donate-level=1 --http-enabled --http-port %api_port% --rig-id %rig_name% --no-color $VARIANTS",
+  "platforms": [
+    "cpu_amd",
+    "cpu_intel"
+  ],
+  "api_protocols": [
+    "xmrig"
+  ],
+  "api_port": 4030,
+  "coins": {
+    "XMR": "",
+    "XTM": "",
+    "ZEPH": "",
+    "KCN": ""
+  },
+  "variants": [
+    {
+      "coins": [
+        "XMR",
+        "XTM",
+        "ZEPH",
+        "KCN"
+      ],
+      "arguments": {
+        "amd": "--no-cpu --opencl",
+        "nvidia": "--no-cpu --cuda"
+      },
+      "platforms": {
+        "amd": [
+          "amd_adl",
+          "amd_sysfs"
+        ],
+        "nvidia": [
+          "nvidia"
+        ]
+      }
+    }
+  ]
+}

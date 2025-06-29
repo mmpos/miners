@@ -1,0 +1,26 @@
+{
+  "name": "xlarig",
+  "project_id": {
+    "linux": "111"
+  },
+  "executables": {
+    "windows": "xlarig.exe",
+    "linux": "xlarig"
+  },
+  "pool_protocol": {
+    "tcp": "",
+    "tls": "--tls"
+  },
+  "arguments": "%pool_protocol% -o %pool_server%:%pool_port% -u %user% -p %password% --donate-level=1 --http-enabled --http-port %api_port% --rig-id %rig_name% --no-color",
+  "platforms": [
+    "cpu_amd",
+    "cpu_intel"
+  ],
+  "api_protocols": [
+    "xmrig"
+  ],
+  "api_port": 4030,
+  "coins": {
+    "XLA": ""
+  }
+}

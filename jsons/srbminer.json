@@ -1,0 +1,243 @@
+{
+  "name": "SRB Miner",
+  "project_id": {
+    "linux": "92",
+    "windows": "44"
+  },
+  "executables": {
+    "windows": "SRBMiner-MULTI.exe",
+    "linux": "SRBMiner-MULTI"
+  },
+  "pool_protocol": {
+    "tcp": "",
+    "tls": "stratum+tcps://"
+  },
+  "arguments": "$ALGO $VARIANTS --pool %pool_protocol%%pool_server%:%pool_port% --wallet %wallet_address% --worker %rig_name%%miner_id% --password %password% --log-file /dev/null --api-enable --api-port %api_port%",
+  "multi_coin": true,
+  "special_coins": [
+    "ZIL"
+  ],
+  "platforms": [
+    "amd_sysfs",
+    "amd_adl",
+    "nvidia",
+    "intel_sysfs"
+  ],
+  "api_protocols": [
+    "srbminer"
+  ],
+  "api_port": 4028,
+  "coins": {
+    "KAS": "--algorithm kaspa --disable-cpu",
+    "HTN": "--algorithm hoohash --disable-cpu",
+    "XTM": "--algorithm sha3x --disable-cpu",
+    "CPAY": "--algorithm cryptixhash --disable-cpu",
+    "MBC": "--algorithm yespower2b --disable-gpu",
+    "QUAI": "--algorithm progpow_quai --disable-cpu",
+    "CLORE": "--algorithm kawpow --disable-cpu",
+    "ZANO": "--algorithm progpow_zano --disable-cpu",
+    "EVR": "--algorithm evrprogpow --disable-cpu",
+    "TLS": "--algorithm progpow_telestai --disable-cpu",
+    "BLOCX": "--algorithm blocx_autolykos2 --disable-cpu",
+    "RTM": "--algorithm ghostrider --disable-cpu",
+    "MEWC": "--algorithm meowpow --disable-cpu",
+    "KCN": "--algorithm flex --disable-gpu",
+    "XEL": "--algorithm xelishashv2 --disable-gpu",
+    "VISH": "--algorithm yespower --disable-gpu",
+    "BIT": "--algorithm aurum --disable-gpu",
+    "PYI": "--algorithm pyrinhashv2 --disable-cpu",
+    "KLS": "--algorithm karlsenhashv2 --disable-cpu",
+    "RXD": "--algorithm sha512_256d_radiant --disable-cpu",
+    "RVN": "--algorithm kawpow --disable-cpu",
+    "NEOX": "--algorithm kawpow --disable-cpu",
+    "ALPH": "--algorithm blake3_alephium --disable-cpu",
+    "XMR": "--algorithm randomx --disable-gpu",
+    "QRL": "--algorithm randomx --disable-gpu",
+    "ZEPH": "--algorithm randomx --disable-gpu",
+    "SAL": "--algorithm randomx --disable-gpu",
+    "CCX": "--algorithm cryptonight_gpu --disable-cpu",
+    "RYO": "--algorithm cryptonight_gpu --disable-cpu",
+    "VRSC": "--algorithm verushash",
+    "ERG": "--algorithm autolykos2",
+    "IRON": "--algorithm fishhash --disable-cpu",
+    "PLSR": "--algorithm curvehash",
+    "VTC": "--algorithm verthash",
+    "XLA": "--algorithm panthera --disable-gpu",
+    "LOKI": "--algorithm randomxl --disable-gpu",
+    "HNS": "--algorithm bl2bsha3 --disable-cpu",
+    "BBC": "--algorithm cryptonight_bbc --disable-cpu",
+    "XHV": "--algorithm cryptonight_xhv --disable-cpu",
+    "TRTL": "--algorithm argon2id_chukwa2 --disable-cpu",
+    "KDA": "--algorithm kadena --disable-cpu",
+    "CKB": "--algorithm eaglesong --disable-cpu",
+    "ETH": "--algorithm ethash --disable-cpu",
+    "RTH": "--algorithm ethashb3 --disable-cpu",
+    "HYP": "--algorithm ethashb3 --disable-cpu",
+    "ETC": "--algorithm etchash --disable-cpu",
+    "UBQ": "--algorithm ubqhash --disable-cpu",
+    "FIRO": "--algorithm firopow --disable-cpu",
+    "DCR": "--algorithm blake3_decred --disable-cpu"
+  },
+  "override_arguments": [
+    {
+      "coins": [
+        "ETH",
+        "RTH",
+        "HYP",
+        "ETC"
+      ],
+      "value": "$ALGO $VARIANTS --pool %pool_protocol%%pool_server%:%pool_port% --wallet %wallet_address% --worker %rig_name%%miner_id% --password %password% --log-file /dev/null --api-enable --api-port %api_port% --esm 0 --enable-ethash-leak-fix"
+    },
+    {
+      "coins": [
+        "UBQ"
+      ],
+      "value": "$ALGO $VARIANTS --pool %pool_protocol%%pool_server%:%pool_port% --wallet %wallet_address% --password %password% --log-file /dev/null --api-enable --api-port %api_port% --esm 1 --enable-ethash-leak-fix"
+    },
+    {
+      "coins": [
+        "VTC",
+        "PLSR",
+        "ERG",
+        "IRON",
+        "CCX",
+        "RYO",
+        "KLS",
+        "KCN",
+        "MEWC",
+        "RTM",
+        "BLOCX",
+        "PYI",
+        "RXD",
+        "RVN",
+        "TLS",
+        "EVR",
+        "ZANO",
+        "CLORE",
+        "QUAI",
+        "HTN",
+        "KAS",
+        "CPAY"
+      ],
+      "value": "$ALGO $VARIANTS --pool %pool_protocol%%pool_server%:%pool_port% --wallet %user% --password %password% --log-file /dev/null --api-enable --api-port %api_port%"
+    }
+  ],
+  "override_platforms": [
+    {
+      "coins": [
+        "MBC",
+        "KCN",
+        "XEL",
+        "VISH",
+        "BIT",
+        "XMR",
+        "XTM",
+        "QRL",
+        "ZEPH",
+        "SAL",
+        "XLA",
+        "LOKI"
+      ],
+      "values": [
+        "cpu_amd",
+        "cpu_intel"
+      ]
+    },
+    {
+      "coins": [
+        "CCX",
+        "RYO",
+        "HNS",
+        "BBC",
+        "XHV",
+        "TRTL",
+        "KDA",
+        "CKB",
+        "ETH",
+        "RTH",
+        "HYP",
+        "ETC",
+        "UBQ",
+        "FIRO"
+      ],
+      "values": [
+        "amd_sysfs",
+        "amd_adl",
+        "nvidia"
+      ]
+    },
+    {
+      "coins": [
+        "ERG",
+        "PLSR",
+        "VTC",
+        "VRSC"
+      ],
+      "values": [
+      ]
+    }
+  ],
+  "variants": [
+    {
+      "coins": [
+        "ERG",
+        "VTC"
+      ],
+      "arguments": {
+        "cpu": "--disable-gpu",
+        "gpu": "--disable-cpu"
+      },
+      "platforms": {
+        "cpu": [
+          "cpu_amd",
+          "cpu_intel"
+        ],
+        "gpu": [
+          "amd_sysfs",
+          "amd_adl",
+          "nvidia",
+          "intel_sysfs"
+        ]
+      }
+    },
+    {
+      "coins": [
+        "PLSR"
+      ],
+      "arguments": {
+        "cpu": "--disable-gpu",
+        "gpu": "--disable-cpu"
+      },
+      "platforms": {
+        "cpu": [
+          "cpu_amd",
+          "cpu_intel"
+        ],
+        "gpu": [
+          "amd_sysfs",
+          "amd_adl"
+        ]
+      }
+    },
+    {
+      "coins": [
+        "VRSC"
+      ],
+      "arguments": {
+        "cpu": "--disable-gpu",
+        "gpu": "--disable-cpu"
+      },
+      "platforms": {
+        "cpu": [
+          "cpu_amd",
+          "cpu_intel"
+        ],
+        "gpu": [
+          "amd_sysfs",
+          "amd_adl",
+          "nvidia"
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,101 @@
+{
+  "name": "gminer",
+  "project_id": {
+    "linux": "13",
+    "windows": "46"
+  },
+  "executables": {
+    "windows": "miner.exe",
+    "linux": "miner"
+  },
+  "pool_protocol": {
+    "tcp": "",
+    "tls": "--ssl 1"
+  },
+  "arguments": "$ALGO %pool_protocol% --server %pool_server% --port %pool_port% --user %user% --pass %password% --api %api_port%",
+  "multi_coin": true,
+  "special_coins": [
+    "ZIL"
+  ],
+  "platforms": [
+    "nvidia"
+  ],
+  "api_protocols": [
+    "gminer"
+  ],
+  "api_port": 4029,
+  "coins": {
+    "RXD": "--algo radiant",
+    "DERO": "--algo dero",
+    "XNA": "--algo kawpow",
+    "CLORE": "--algo kawpow",
+    "IRON": "--algo ironfish",
+    "HNS": "--algo handshake",
+    "CFX": "--algo octopus",
+    "ERG": "--algo autolykos2",
+    "KAS": "--algo kaspa",
+    "TON": "--algo ton",
+    "PMEER": "--algo cuckoo24",
+    "CTXC": "--algo cortex",
+    "SERO": "--algo sero",
+    "BBC": "--algo bbc",
+    "BTG": "--algo 144_5",
+    "BTCZ": "--algo 144_5",
+    "AION": "--algo equihash210_9",
+    "ZEL": "--algo 125_4",
+    "FLUX": "--algo 125_4",
+    "GRIN": "--algo grin29",
+    "MWC": "--algo grin29",
+    "XWP": "--algo cuckaroo29s",
+    "AE": "--algo cuckoo29",
+    "ANON": "--algo 144_5",
+    "SAFE": "--algo 144_5",
+    "XSG": "--algo 144_5",
+    "ZER": "--algo 192_7",
+    "GENX": "--algo 192_7",
+    "YEC": "--algo 192_7",
+    "BEAM": "--algo beamhashIII --pers Beam-PoW",
+    "ETH": "--algo ethash",
+    "ETC": "--algo etchash",
+    "KDA": "--algo blake2s",
+    "CKB": "--algo eaglesong",
+    "RVN": "--algo kawpow",
+    "NEOX": "--algo kawpow",
+    "TUBE": "--algo bittube",
+    "VBK": "--algo vprogpow",
+    "ZANO": "--algo progpowz"
+  },
+  "override_platforms": [
+    {
+      "coins": [
+        "HNS",
+        "ERG",
+        "KAS",
+        "PMEER",
+        "BTG",
+        "BTCZ",
+        "AION",
+        "ZEL",
+        "FLUX",
+        "GRIN",
+        "MWC",
+        "XWP",
+        "AE",
+        "ANON",
+        "SAFE",
+        "XSG",
+        "ZER",
+        "GENX",
+        "YEC",
+        "BEAM",
+        "ETH",
+        "ETC"
+      ],
+      "values": [
+        "nvidia",
+        "amd_adl",
+        "amd_sysfs"
+      ]
+    }
+  ]
+}

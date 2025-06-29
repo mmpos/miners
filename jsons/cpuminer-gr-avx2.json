@@ -1,0 +1,26 @@
+{
+  "name": "cpuminer (gr-avx2)",
+  "project_id": {
+    "windows": "114",
+    "linux": "113"
+  },
+  "executables": {
+    "windows": "cpuminer.exe",
+    "linux": "cpuminer"
+  },
+  "pool_protocol": {
+    "tcp": "stratum+tcp:\/\/"
+  },
+  "arguments": "$ALGO -o %pool_protocol%%pool_server%:%pool_port% -u %user% -p %password% --api-bind %api_port%",
+  "platforms": [
+    "cpu_amd",
+    "cpu_intel"
+  ],
+  "api_protocols": [
+    "ccminer"
+  ],
+  "api_port": 4069,
+  "coins": {
+    "RTM": "-a gr"
+  }
+}

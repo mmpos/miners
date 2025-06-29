@@ -1,0 +1,32 @@
+{
+  "name": "TNN-Miner",
+  "project_id": {
+    "linux": "162"
+  },
+  "executables": {
+    "windows": "tnn-miner.exe",
+    "linux": "tnn-miner"
+  },
+  "pool_protocol": {
+    "tcp": "",
+    "tls": ""
+  },
+  "arguments": "$ALGO --stratum --daemon-address %pool_server% --port %pool_port% --wallet %user% --threads $(nproc) --broadcast --dev-fee 1",
+  "platforms": [
+    "cpu_amd",
+    "cpu_intel",
+    "cpu_arm64"
+  ],
+  "api_protocols": [
+    "miner-script"
+  ],
+  "api_port": 0,
+  "coins": {
+    "DERO": "--dero",
+    "SPR": "--spectre",
+    "XEL": "--xelis",
+    "XMR": "--randomx",
+    "XTM": "--randomx",
+    "ZEPH": "--randomx"
+  }
+}

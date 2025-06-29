@@ -1,0 +1,27 @@
+{
+  "name": "rushminer",
+  "project_id": {
+    "linux": "152"
+  },
+  "executables": {
+    "windows": "launcher.bat",
+    "linux": "launcher.sh"
+  },
+  "pool_protocol": {
+    "tcp": ""
+  },
+  "arguments": "$ALGO --pool %pool_server%:%pool_port% --worker %rig_name%%miner_id% --wallet %wallet_address%",
+  "platforms": [
+    "fpga_vu33p",
+    "fpga_vu35p",
+    "fpga_vu9p",
+    "fpga_vu13p"
+  ],
+  "api_protocols": [
+    "miner-script"
+  ],
+  "api_port": 0,
+  "coins": {
+    "TON": "--algo gram"
+  }
+}

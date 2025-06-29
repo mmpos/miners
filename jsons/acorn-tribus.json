@@ -1,0 +1,24 @@
+{
+  "name": "acorn-tribus",
+  "project_id": {
+    "linux": "69"
+  },
+  "executables": {
+    "windows": "AcornMiner.exe",
+    "linux": "AcornMiner"
+  },
+  "pool_protocol": {
+    "tcp": ""
+  },
+  "arguments": "%pool_server% %pool_port% %wallet_address% %rig_name% %password% 125",
+  "platforms": [
+    "fpga_acorn"
+  ],
+  "api_protocols": [
+    "miner-script"
+  ],
+  "api_port": 0,
+  "coins": {
+    "DNR": ""
+  }
+}

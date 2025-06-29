@@ -1,0 +1,68 @@
+{
+  "name": "Rigel",
+  "project_id": {
+    "linux": "133",
+    "windows": "132"
+  },
+  "executables": {
+    "windows": "rigel.exe",
+    "linux": "rigel"
+  },
+  "pool_protocol": {
+    "tcp": "stratum+tcp://",
+    "tls": "stratum+ssl://"
+  },
+  "arguments": "$ALGO --no-tui -o %pool_protocol%%pool_server%:%pool_port% -u %wallet_address% -w %rig_name%%miner_id% --api-bind 127.0.0.1:%api_port%",
+  "multi_coin": true,
+  "special_coins": [
+    "ZIL"
+  ],
+  "platforms": [
+    "nvidia"
+  ],
+  "api_protocols": [
+    "rigel"
+  ],
+  "api_port": 7500,
+  "coins": {
+    "RVN": "-a kawpow --coin rvn",
+    "ZANO": "-a progpowz",
+    "XTM": "-a sha3x",
+    "QUAI": "-a quai",
+    "BLOCX": "-a autolykos2 --coin blocx",
+    "TON": "-a sha256ton",
+    "ABEL": "-a abelian",
+    "AIPG": "-a kawpow --coin aipg",
+    "NEOX": "-a kawpow --coin neox",
+    "KLS": "-a karlsenhashv2",
+    "PYI": "-a pyrinhashv2",
+    "CLORE": "-a kawpow --coin clore",
+    "XNA": "-a kawpow --coin xna",
+    "CFX": "-a octopus",
+    "ETH": "-a ethash",
+    "RTH": "-a ethashb3",
+    "HYP": "-a ethashb3",
+    "ERG": "-a autolykos2",
+    "RXD": "-a sha512256d",
+    "ETC": "-a etchash",
+    "NEXA": "-a nexapow",
+    "KAS": "-a kheavyhash",
+    "ALPH": "-a alephium",
+    "IRON": "-a fishhash",
+    "XEL": "-a xelishashv2"
+  },
+  "override_pool_protocol": [
+    {
+      "coins": [
+        "ETH",
+        "RTH",
+        "HYP",
+        "ETC"
+      ],
+      "value": {
+        "tcp": "ethproxy+tcp://",
+        "tls": "ethproxy+ssl://"
+      }
+    }
+  ]
+}

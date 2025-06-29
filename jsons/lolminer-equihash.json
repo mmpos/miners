@@ -1,0 +1,108 @@
+{
+  "name": "lolMiner",
+  "project_id": {
+    "linux": "14",
+    "windows": "61"
+  },
+  "executables": {
+    "windows": "lolMiner.exe",
+    "linux": "lolMiner"
+  },
+  "pool_protocol": {
+    "tcp": "",
+    "tls": "stratum+ssl://"
+  },
+  "arguments": "$ALGO --pool %pool_protocol%%pool_server%:%pool_port% --user %user% --pass %password% --apiport %api_port% --log off",
+  "multi_coin": true,
+  "platforms": [
+    "nvidia",
+    "amd_adl",
+    "amd_sysfs"
+  ],
+  "api_protocols": [
+    "lolminer"
+  ],
+  "api_port": 4028,
+  "coins": {
+    "AION": "--coin AION",
+    "AE": "--algo C29AE",
+    "PYI": "--algo PYRINV2",
+    "XTM": "--algo SHA3X",
+    "KLS": "--algo KARLSENV2",
+    "RTH": "--algo ETHASHB3",
+    "HYP": "--algo ETHASHB3",
+    "CFX": "--algo OCTOPUS",
+    "RXD": "--algo RADIANT",
+    "NEXA": "--algo NEXA",
+    "KAS": "--algo KASPA",
+    "IRON": "--algo FISHHASH",
+    "ALPH": "--algo ALEPH",
+    "CTXC": "--coin CTXC",
+    "BEAM": "--coin BEAM",
+    "ZEL": "--coin ZEL",
+    "FLUX": "--coin ZEL",
+    "ANON": "--coin ANON",
+    "BTG": "--coin AUTO144_5",
+    "BTCZ": "--coin AUTO144_5",
+    "SAFE": "--coin AUTO144_5",
+    "XSG": "--coin AUTO144_5",
+    "ZER": "--coin SCASH",
+    "GENX": "--coin SCASH",
+    "YEC": "--coin AUTO192_7",
+    "GRIN": "--coin GRIN-C32",
+    "MWC": "--coin MWC-C31",
+    "TON": "--algo TON",
+    "UBQ": "--algo UBQHASH",
+    "ETH": "--algo ETHASH",
+    "ETC": "--algo ETCHASH",
+    "TUBE": "--algo CR29-40",
+    "ERG": "--algo AUTOLYKOS2",
+    "BLOCX": "--algo AUTOLYKOS2",
+    "XWP": "--algo CR29-32"
+  },
+  "override_platforms": [
+    {
+      "coins": [
+        "RTH",
+        "HYP",
+        "CFX",
+        "KAS",
+        "IRON",
+        "ZEL",
+        "FLUX",
+        "BTG",
+        "BTCZ",
+        "SAFE",
+        "XSG",
+        "TON",
+        "ETH",
+        "ETC"
+      ],
+      "values": [
+        "nvidia",
+        "amd_adl",
+        "amd_sysfs",
+        "intel_sysfs"
+      ]
+    }
+  ],
+  "override_arguments": [
+    {
+      "coins": [
+        "TON"
+      ],
+      "value": "$ALGO --pool %pool_protocol%%pool_server%:%pool_port% --user %wallet_address% --apiport %api_port% --log off"
+    }
+  ],
+  "override_pool_protocol": [
+    {
+      "coins": [
+        "TON"
+      ],
+      "value": {
+        "tcp": "http://",
+        "tls": "https://"
+      }
+    }
+  ]
+}
