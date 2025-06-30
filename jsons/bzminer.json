@@ -30,12 +30,10 @@
   "coins": {
     "ETH": "-a ethash",
     "ETC": "-a etchash",
-    "RTH": "-a rethereum",
     "WART": "-a warthog",
     "DCR": "-a decred",
     "DNX": "-a dynex",
     "CLORE": "-a clore",
-    "BLOCX": "-a blocx",
     "XNA": "-a nexa",
     "IRON": "-a fishhash",
     "ALPH": "-a alph",

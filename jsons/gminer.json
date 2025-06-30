@@ -26,7 +26,6 @@
   "api_port": 4029,
   "coins": {
     "RXD": "--algo radiant",
-    "DERO": "--algo dero",
     "XNA": "--algo kawpow",
     "CLORE": "--algo kawpow",
     "IRON": "--algo ironfish",
