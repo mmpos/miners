@@ -55,6 +55,19 @@
     "ERG": "--algo AUTOLYKOS2",
     "XWP": "--algo CR29-32"
   },
+  "secondary_coins": {
+    "XTM": {
+      "coins": [
+        "CFX",
+        "ERG",
+        "ETC",
+        "KLS",
+        "IRON",
+        "UBQ"
+      ],
+      "arguments": "--dualmode SHA3XDUAL --dualpool %pool_protocol:XTM%%pool_server:XTM%:%pool_port:XTM% --dualuser %user:XTM%"
+    }
+  },
   "override_platforms": [
     {
       "coins": [
