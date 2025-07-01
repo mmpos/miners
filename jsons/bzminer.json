@@ -14,9 +14,6 @@
   },
   "arguments": "$ALGO -p %pool_protocol%%pool_server%:%pool_port% -w %wallet_address% -r %rig_name% --http_enabled 1 --http_port %api_port% --nc 1",
   "multi_coin": true,
-  "special_coins": [
-    "ZIL"
-  ],
   "platforms": [
     "nvidia",
     "amd_adl",

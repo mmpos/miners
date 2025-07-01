@@ -14,9 +14,6 @@
   },
   "arguments": "$ALGO $VARIANTS --pool %pool_protocol%%pool_server%:%pool_port% --wallet %wallet_address% --worker %rig_name%%miner_id% --password %password% --log-file /dev/null --api-enable --api-port %api_port%",
   "multi_coin": true,
-  "special_coins": [
-    "ZIL"
-  ],
   "platforms": [
     "amd_sysfs",
     "amd_adl",

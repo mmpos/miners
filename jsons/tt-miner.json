@@ -14,9 +14,6 @@
   },
   "arguments": "$ALGO -luck -P %pool_protocol%%user%:%password%@%pool_server%:%pool_port% --api-bind 127.0.0.1:%api_port%",
   "multi_coin": true,
-  "special_coins": [
-    "ZIL"
-  ],
   "platforms": [
     "nvidia"
   ],
