@@ -26,11 +26,8 @@
   "coins": {
     "AION": "--coin AION",
     "AE": "--algo C29AE",
-    "PYI": "--algo PYRINV2",
     "XTM": "--algo SHA3X",
     "KLS": "--algo KARLSENV2",
-    "RTH": "--algo ETHASHB3",
-    "HYP": "--algo ETHASHB3",
     "CFX": "--algo OCTOPUS",
     "RXD": "--algo RADIANT",
     "NEXA": "--algo NEXA",
@@ -55,16 +52,25 @@
     "UBQ": "--algo UBQHASH",
     "ETH": "--algo ETHASH",
     "ETC": "--algo ETCHASH",
-    "TUBE": "--algo CR29-40",
     "ERG": "--algo AUTOLYKOS2",
-    "BLOCX": "--algo AUTOLYKOS2",
     "XWP": "--algo CR29-32"
+  },
+  "secondary_coins": {
+    "XTM": {
+      "coins": [
+        "CFX",
+        "ERG",
+        "ETC",
+        "KLS",
+        "IRON",
+        "UBQ"
+      ],
+      "arguments": "--dualmode SHA3XDUAL --dualpool %pool_protocol:XTM%%pool_server:XTM%:%pool_port:XTM% --dualuser %user:XTM%"
+    }
   },
   "override_platforms": [
     {
       "coins": [
-        "RTH",
-        "HYP",
         "CFX",
         "KAS",
         "IRON",

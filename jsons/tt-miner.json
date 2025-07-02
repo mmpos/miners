@@ -14,9 +14,6 @@
   },
   "arguments": "$ALGO -luck -P %pool_protocol%%user%:%password%@%pool_server%:%pool_port% --api-bind 127.0.0.1:%api_port%",
   "multi_coin": true,
-  "special_coins": [
-    "ZIL"
-  ],
   "platforms": [
     "nvidia"
   ],
@@ -33,8 +30,6 @@
     "MEWC": "-c MEWC",
     "ALPH": "-c ALPH",
     "EVR": "-c EVR",
-    "RTH": "-c RTH",
-    "HYP": "-c RTH",
     "RXD": "-c RXD",
     "ETH": "-c ETH",
     "ETC": "-c ETC",

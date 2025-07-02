@@ -14,9 +14,6 @@
   },
   "arguments": "$ALGO --no-tui -o %pool_protocol%%pool_server%:%pool_port% -u %wallet_address% -w %rig_name%%miner_id% --api-bind 127.0.0.1:%api_port%",
   "multi_coin": true,
-  "special_coins": [
-    "ZIL"
-  ],
   "platforms": [
     "nvidia"
   ],
@@ -29,7 +26,6 @@
     "ZANO": "-a progpowz",
     "XTM": "-a sha3x",
     "QUAI": "-a quai",
-    "BLOCX": "-a autolykos2 --coin blocx",
     "TON": "-a sha256ton",
     "ABEL": "-a abelian",
     "AIPG": "-a kawpow --coin aipg",
@@ -40,8 +36,6 @@
     "XNA": "-a kawpow --coin xna",
     "CFX": "-a octopus",
     "ETH": "-a ethash",
-    "RTH": "-a ethashb3",
-    "HYP": "-a ethashb3",
     "ERG": "-a autolykos2",
     "RXD": "-a sha512256d",
     "ETC": "-a etchash",

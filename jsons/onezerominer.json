@@ -9,9 +9,6 @@
     "linux": "onezerominer"
   },
   "arguments": "$ALGO -w %wallet_address% -o %pool_protocol%%pool_server%:%pool_port% -p %rig_name% --api-host 127.0.0.1 --api-port %api_port%",
-  "special_coins": [
-    "ZIL"
-  ],
   "platforms": [
     "amd_adl",
     "amd_sysfs",

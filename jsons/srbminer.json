@@ -14,9 +14,6 @@
   },
   "arguments": "$ALGO $VARIANTS --pool %pool_protocol%%pool_server%:%pool_port% --wallet %wallet_address% --worker %rig_name%%miner_id% --password %password% --log-file /dev/null --api-enable --api-port %api_port%",
   "multi_coin": true,
-  "special_coins": [
-    "ZIL"
-  ],
   "platforms": [
     "amd_sysfs",
     "amd_adl",
@@ -38,7 +35,6 @@
     "ZANO": "--algorithm progpow_zano --disable-cpu",
     "EVR": "--algorithm evrprogpow --disable-cpu",
     "TLS": "--algorithm progpow_telestai --disable-cpu",
-    "BLOCX": "--algorithm blocx_autolykos2 --disable-cpu",
     "RTM": "--algorithm ghostrider --disable-cpu",
     "MEWC": "--algorithm meowpow --disable-cpu",
     "KCN": "--algorithm flex --disable-gpu",
@@ -71,8 +67,6 @@
     "KDA": "--algorithm kadena --disable-cpu",
     "CKB": "--algorithm eaglesong --disable-cpu",
     "ETH": "--algorithm ethash --disable-cpu",
-    "RTH": "--algorithm ethashb3 --disable-cpu",
-    "HYP": "--algorithm ethashb3 --disable-cpu",
     "ETC": "--algorithm etchash --disable-cpu",
     "UBQ": "--algorithm ubqhash --disable-cpu",
     "FIRO": "--algorithm firopow --disable-cpu",
@@ -82,8 +76,6 @@
     {
       "coins": [
         "ETH",
-        "RTH",
-        "HYP",
         "ETC"
       ],
       "value": "$ALGO $VARIANTS --pool %pool_protocol%%pool_server%:%pool_port% --wallet %wallet_address% --worker %rig_name%%miner_id% --password %password% --log-file /dev/null --api-enable --api-port %api_port% --esm 0 --enable-ethash-leak-fix"
@@ -106,7 +98,6 @@
         "KCN",
         "MEWC",
         "RTM",
-        "BLOCX",
         "PYI",
         "RXD",
         "RVN",
@@ -154,8 +145,6 @@
         "KDA",
         "CKB",
         "ETH",
-        "RTH",
-        "HYP",
         "ETC",
         "UBQ",
         "FIRO"

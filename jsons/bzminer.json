@@ -14,9 +14,6 @@
   },
   "arguments": "$ALGO -p %pool_protocol%%pool_server%:%pool_port% -w %wallet_address% -r %rig_name% --http_enabled 1 --http_port %api_port% --nc 1",
   "multi_coin": true,
-  "special_coins": [
-    "ZIL"
-  ],
   "platforms": [
     "nvidia",
     "amd_adl",
@@ -30,12 +27,10 @@
   "coins": {
     "ETH": "-a ethash",
     "ETC": "-a etchash",
-    "RTH": "-a rethereum",
     "WART": "-a warthog",
     "DCR": "-a decred",
     "DNX": "-a dynex",
     "CLORE": "-a clore",
-    "BLOCX": "-a blocx",
     "XNA": "-a nexa",
     "IRON": "-a fishhash",
     "ALPH": "-a alph",

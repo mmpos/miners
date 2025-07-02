@@ -14,9 +14,6 @@
   },
   "arguments": "$ALGO -o %pool_protocol%%pool_server%:%pool_port% -u %user% -p %password% --api_listen=127.0.0.1:%api_port% --bus_reorder --short_stats",
   "multi_coin": true,
-  "special_coins": [
-    "ZIL"
-  ],
   "platforms": [
     "amd_adl",
     "amd_sysfs"
