@@ -72,6 +72,18 @@
     "FIRO": "--algorithm firopow --disable-cpu",
     "DCR": "--algorithm blake3_decred --disable-cpu"
   },
+  "secondary_coins": {
+    "XTM": {
+      "coins": [
+        "ERG",
+        "ETC",
+        "KLS",
+        "IRON",
+        "UBQ"
+      ],
+      "arguments": "--disable-cpu --algorithm autolykos2\\;sha3x --pool %pool_protocol%%pool_server%:%pool_port%\\;%pool_protocol:XTM%%pool_server:XTM%:%pool_port:XTM% --wallet %user%\\;%user:XTM% --password %password%\\;%password:XTM% --log-file /dev/null --api-enable --api-port %api_port%"
+    }
+  },
   "override_arguments": [
     {
       "coins": [
