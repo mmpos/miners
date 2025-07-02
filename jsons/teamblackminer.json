@@ -26,7 +26,6 @@
     "VTC": "--algo verthash",
     "NEOX": "--algo kawpow",
     "ETH": "--algo ethash",
-    "RTH": "--algo ethashb3",
     "ETC": "--algo etchash"
   }
 }
