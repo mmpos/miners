@@ -45,6 +45,19 @@
     "IRON": "-a fishhash",
     "XEL": "-a xelishashv2"
   },
+  "secondary_coins": {
+    "XTM": {
+      "coins": [
+        "CFX",
+        "ERG",
+        "ETH",
+        "ETC",
+        "KLS",
+        "IRON"
+      ],
+      "arguments": "-a algo1+algo2 --no-tui -o [1]%pool_protocol%%pool_server%:%pool_port% -u [1]%wallet_address% -o [2]%pool_protocol:XTM%%pool_server:XTM%:%pool_port:XTM% -u [2]%wallet_address:XTM% -w %rig_name%%miner_id% --api-bind 127.0.0.1:%api_port%"
+    }
+  },
   "override_pool_protocol": [
     {
       "coins": [
