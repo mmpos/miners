@@ -82,7 +82,7 @@
         "IRON",
         "UBQ"
       ],
-      "arguments": "sha3x"
+      "value": "sha3x"
     }
   },
   "override_arguments": [

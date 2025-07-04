@@ -78,7 +78,7 @@
         "KLS",
         "IRON"
       ],
-      "arguments": "sha512256d"
+      "value": "sha512256d"
     }
   },
   "override_pool_protocol": [
