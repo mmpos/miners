@@ -13,6 +13,7 @@
     "tls": "stratum+ssl://"
   },
   "arguments": "$ALGO --pool %pool_protocol%%pool_server%:%pool_port% --user %user% --pass %password% --apiport %api_port% --log off",
+  "secondary_arguments": "$ALGO --pool %pool_protocol%%pool_server%:%pool_port% --user %user% --pass %password% --dualmode $SECONDARY_ALGO --dualpool %pool_protocol:$SECONDARY_COIN%%pool_server:$SECONDARY_COIN%:%pool_port:$SECONDARY_COIN% --dualuser %user:$SECONDARY_COIN% --apiport %api_port% --log off",
   "multi_coin": true,
   "platforms": [
     "nvidia",
@@ -66,7 +67,7 @@
         "IRON",
         "UBQ"
       ],
-      "arguments": "--dualmode SHA3XDUAL --dualpool %pool_protocol:XTM%%pool_server:XTM%:%pool_port:XTM% --dualuser %user:XTM%"
+      "value": "SHA3XDUAL"
     }
   },
   "override_platforms": [
