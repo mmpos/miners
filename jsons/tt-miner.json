@@ -13,6 +13,7 @@
     "tls": "stratum+ssl://"
   },
   "arguments": "$ALGO -luck -P %pool_protocol%%user%:%password%@%pool_server%:%pool_port% --api-bind 127.0.0.1:%api_port%",
+  "dual_arguments": "$ALGO -luck -P %pool_protocol%%user%:%password%@%pool_server%:%pool_port% $SECONDARY_ALGO --api-bind 127.0.0.1:%api_port%",
   "multi_coin": true,
   "platforms": [
     "nvidia"
@@ -38,6 +39,26 @@
     "ZANO": "-c ZANO",
     "RVN": "-c RVN",
     "IRON": "-c IRON"
+  },
+  "secondary_coins": {
+    "ALPH": {
+      "coins": [
+        "ETH",
+        "ETC",
+        "UBQ",
+        "IRON"
+      ],
+      "value": "-cALT ALPH -PALT %pool_protocol:ALPH%%user:ALPH%:%password:ALPH%@%pool_server:ALPH%:%pool_port:ALPH%"
+    },
+    "RXD": {
+      "coins": [
+        "ETH",
+        "ETC",
+        "UBQ",
+        "IRON"
+      ],
+      "value": "-cALT RXD -PALT %pool_protocol:RXD%%user:RXD%:%password:RXD%@%pool_server:RXD%:%pool_port:RXD%"
+    }
   },
   "override_platforms": [
     {

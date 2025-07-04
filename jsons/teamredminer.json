@@ -13,7 +13,7 @@
     "tls": "stratum+ssl://"
   },
   "arguments": "$ALGO -o %pool_protocol%%pool_server%:%pool_port% -u %user% -p %password% --api_listen=127.0.0.1:%api_port% --bus_reorder --short_stats",
-  "secondary_arguments": "$ALGO -o %pool_protocol%%pool_server%:%pool_port% -u %user% -p %password% --api_listen=127.0.0.1:%api_port% $SECONDARY_ALGO --bus_reorder --short_stats",
+  "dual_arguments": "$ALGO -o %pool_protocol%%pool_server%:%pool_port% -u %user% -p %password% --api_listen=127.0.0.1:%api_port% $SECONDARY_ALGO --bus_reorder --short_stats",
   "multi_coin": true,
   "platforms": [
     "amd_adl",

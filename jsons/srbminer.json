@@ -12,8 +12,8 @@
     "tcp": "",
     "tls": "stratum+tcps://"
   },
-  "arguments": "$VARIANTS $ALGO --pool %pool_protocol%%pool_server%:%pool_port% --wallet %wallet_address% --worker %rig_name%%miner_id% --password %password% --log-file /dev/null --api-enable --api-port %api_port%",
-  "secondary_arguments": "$VARIANTS $ALGO;$SECONDARY_ALGO --pool %pool_protocol%%pool_server%:%pool_port%;%pool_protocol:$SECONDARY_COIN%%pool_server:$SECONDARY_COIN%:%pool_port:$SECONDARY_COIN% --wallet %user%;%user:$SECONDARY_COIN% --password %password%;%password:$SECONDARY_COIN% --log-file /dev/null --api-enable --api-port %api_port%",
+  "arguments": "$VARIANTS $ALGO --pool %pool_protocol%%pool_server%:%pool_port% --wallet %user% --password %password% --log-file /dev/null --api-enable --api-port %api_port%",
+  "dual_arguments": "$VARIANTS $ALGO --pool %pool_protocol%%pool_server%:%pool_port% --wallet %user% --password %password% $SECONDARY_ALGO --log-file /dev/null --api-enable --api-port %api_port%",
   "multi_coin": true,
   "platforms": [
     "amd_sysfs",
@@ -82,7 +82,7 @@
         "IRON",
         "UBQ"
       ],
-      "value": "sha3x"
+      "value": "--algorithm sha3x --pool %pool_protocol:XTM%%pool_server:XTM%:%pool_port:XTM% --wallet %user:XTM% --password %password:XTM%"
     }
   },
   "override_arguments": [

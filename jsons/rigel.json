@@ -13,7 +13,7 @@
     "tls": "stratum+ssl://"
   },
   "arguments": "$ALGO --no-tui -o %pool_protocol%%pool_server%:%pool_port% -u %wallet_address% -w %rig_name%%miner_id% --api-bind 127.0.0.1:%api_port%",
-  "secondary_arguments": "$ALGO+$SECONDARY_ALGO --no-tui -o [1]%pool_protocol%%pool_server%:%pool_port% -u [1]%wallet_address% -o [2]%pool_protocol:$SECONDARY_COIN%%pool_server:$SECONDARY_COIN%:%pool_port:$SECONDARY_COIN% -u [2]%wallet_address:$SECONDARY_COIN% -w %rig_name%%miner_id% --api-bind 127.0.0.1:%api_port%",
+  "dual_arguments": "$ALGO+$SECONDARY_ALGO --no-tui -o [1]%pool_protocol%%pool_server%:%pool_port% -u [1]%wallet_address% -o [2]%pool_protocol:$SECONDARY_COIN%%pool_server:$SECONDARY_COIN%:%pool_port:$SECONDARY_COIN% -u [2]%wallet_address:$SECONDARY_COIN% -w %rig_name%%miner_id% --api-bind 127.0.0.1:%api_port%",
   "multi_coin": true,
   "platforms": [
     "nvidia"
