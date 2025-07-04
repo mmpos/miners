@@ -55,7 +55,29 @@
         "KLS",
         "IRON"
       ],
-      "arguments": "-a algo1+algo2 --no-tui -o [1]%pool_protocol%%pool_server%:%pool_port% -u [1]%wallet_address% -o [2]%pool_protocol:XTM%%pool_server:XTM%:%pool_port:XTM% -u [2]%wallet_address:XTM% -w %rig_name%%miner_id% --api-bind 127.0.0.1:%api_port%"
+      "arguments": "-a $ALGO+sha3x --no-tui -o [1]%pool_protocol%%pool_server%:%pool_port% -u [1]%wallet_address% -o [2]%pool_protocol:XTM%%pool_server:XTM%:%pool_port:XTM% -u [2]%wallet_address:XTM% -w %rig_name%%miner_id% --api-bind 127.0.0.1:%api_port%"
+    },
+    "ALPH": {
+      "coins": [
+        "CFX",
+        "ERG",
+        "ETH",
+        "ETC",
+        "KLS",
+        "IRON"
+      ],
+      "arguments": "-a $ALGO+alephium --no-tui -o [1]%pool_protocol%%pool_server%:%pool_port% -u [1]%wallet_address% -o [2]%pool_protocol:ALPH%%pool_server:ALPH%:%pool_port:ALPH% -u [2]%wallet_address:ALPH% -w %rig_name%%miner_id% --api-bind 127.0.0.1:%api_port%"
+    },
+    "RXD": {
+      "coins": [
+        "CFX",
+        "ERG",
+        "ETH",
+        "ETC",
+        "KLS",
+        "IRON"
+      ],
+      "arguments": "-a $ALGO+sha512256d --no-tui -o [1]%pool_protocol%%pool_server%:%pool_port% -u [1]%wallet_address% -o [2]%pool_protocol:RXD%%pool_server:RXD%:%pool_port:RXD% -u [2]%wallet_address:RXD% -w %rig_name%%miner_id% --api-bind 127.0.0.1:%api_port%"
     }
   },
   "override_pool_protocol": [
