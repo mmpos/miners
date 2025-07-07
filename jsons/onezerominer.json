@@ -8,7 +8,7 @@
     "windows": "onezerominer.exe",
     "linux": "onezerominer"
   },
-  "arguments": "$ALGO -w %wallet_address% -o %pool_protocol%%pool_server%:%pool_port% -p %rig_name% --api-host 127.0.0.1 --api-port %api_port%",
+  "arguments": "$ALGO -w %user% -o %pool_protocol%%pool_server%:%pool_port% --api-host 127.0.0.1 --api-port %api_port%",
   "platforms": [
     "amd_adl",
     "amd_sysfs",
@@ -20,14 +20,15 @@
   "api_port": 3333,
   "coins": {
     "DNX": "-a dynex",
-    "XEL": "-a xelis"
+    "XEL": "-a xelis",
+    "CPAY": "-a cryptix"
   },
   "override_arguments": [
     {
       "coins": [
-        "XEL"
+        "DNX"
       ],
-      "value": "$ALGO -w %wallet_address% -o %pool_protocol%%pool_server%:%pool_port% --worker %rig_name%%miner_id% --api-host 127.0.0.1 --api-port %api_port%"
+      "value": "$ALGO -w %wallet_address% -o %pool_protocol%%pool_server%:%pool_port% -p %rig_name%%miner_id% --api-host 127.0.0.1 --api-port %api_port%"
     }
   ]
 }
