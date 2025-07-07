@@ -29,7 +29,6 @@
     "KAS": "--disable-cpu --algorithm kaspa",
     "HTN": "--disable-cpu --algorithm hoohash",
     "XTM": "--disable-cpu --algorithm sha3x",
-    "CPAY": "--disable-cpu --algorithm cryptixhash",
     "MBC": "--disable-gpu --algorithm yespower2b",
     "QUAI": "--disable-cpu --algorithm progpow_quai",
     "CLORE": "--disable-cpu --algorithm kawpow",
@@ -120,8 +119,7 @@
         "CLORE",
         "QUAI",
         "HTN",
-        "KAS",
-        "CPAY"
+        "KAS"
       ],
       "value": "$ALGO $VARIANTS --pool %pool_protocol%%pool_server%:%pool_port% --wallet %user% --password %password% --log-file /dev/null --api-enable --api-port %api_port%"
     }
