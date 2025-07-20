@@ -13,6 +13,7 @@
     "tls": "stratum+ssl://"
   },
   "arguments": "$ALGO --no-tui -o %pool_protocol%%pool_server%:%pool_port% -u %wallet_address% -w %rig_name%%miner_id% --api-bind 127.0.0.1:%api_port%",
+  "dual_arguments": "$ALGO+$SECONDARY_ALGO --no-tui -o [1]%pool_protocol%%pool_server%:%pool_port% -u [1]%wallet_address% -o [2]%pool_protocol:$SECONDARY_COIN%%pool_server:$SECONDARY_COIN%:%pool_port:$SECONDARY_COIN% -u [2]%wallet_address:$SECONDARY_COIN% -w %rig_name%%miner_id% --api-bind 127.0.0.1:%api_port%",
   "multi_coin": true,
   "platforms": [
     "nvidia"
@@ -22,18 +23,18 @@
   ],
   "api_port": 7500,
   "coins": {
-    "RVN": "-a kawpow --coin rvn",
+    "RVN": "--coin rvn -a kawpow",
     "ZANO": "-a progpowz",
     "XTM": "-a sha3x",
     "QUAI": "-a quai",
     "TON": "-a sha256ton",
     "ABEL": "-a abelian",
-    "AIPG": "-a kawpow --coin aipg",
-    "NEOX": "-a kawpow --coin neox",
+    "AIPG": "--coin aipg -a kawpow",
+    "NEOX": "--coin neox -a kawpow",
     "KLS": "-a karlsenhashv2",
     "PYI": "-a pyrinhashv2",
-    "CLORE": "-a kawpow --coin clore",
-    "XNA": "-a kawpow --coin xna",
+    "CLORE": "--coin clore -a kawpow",
+    "XNA": "--coin xna -a kawpow",
     "CFX": "-a octopus",
     "ETH": "-a ethash",
     "ERG": "-a autolykos2",
@@ -44,6 +45,41 @@
     "ALPH": "-a alephium",
     "IRON": "-a fishhash",
     "XEL": "-a xelishashv2"
+  },
+  "secondary_coins": {
+    "XTM": {
+      "coins": [
+        "CFX",
+        "ERG",
+        "ETH",
+        "ETC",
+        "KLS",
+        "IRON"
+      ],
+      "value": "sha3x"
+    },
+    "ALPH": {
+      "coins": [
+        "CFX",
+        "ERG",
+        "ETH",
+        "ETC",
+        "KLS",
+        "IRON"
+      ],
+      "value": "alephium"
+    },
+    "RXD": {
+      "coins": [
+        "CFX",
+        "ERG",
+        "ETH",
+        "ETC",
+        "KLS",
+        "IRON"
+      ],
+      "value": "sha512256d"
+    }
   },
   "override_pool_protocol": [
     {

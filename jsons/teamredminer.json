@@ -13,6 +13,7 @@
     "tls": "stratum+ssl://"
   },
   "arguments": "$ALGO -o %pool_protocol%%pool_server%:%pool_port% -u %user% -p %password% --api_listen=127.0.0.1:%api_port% --bus_reorder --short_stats",
+  "dual_arguments": "$ALGO -o %pool_protocol%%pool_server%:%pool_port% -u %user% -p %password% --api_listen=127.0.0.1:%api_port% $SECONDARY_ALGO --bus_reorder --short_stats",
   "multi_coin": true,
   "platforms": [
     "amd_adl",
@@ -55,6 +56,24 @@
     "GRIN": "-a cuckatoo31_grin",
     "MWC": "-a cuckatoo31_grin"
   },
+  "secondary_coins": {
+    "ALPH": {
+      "coins": [
+        "ERG",
+        "ETC",
+        "IRON"
+      ],
+      "value": "--alph -o %pool_protocol:ALPH%%pool_server:ALPH%:%pool_port:ALPH% -u %user:ALPH% -p %password:ALPH% --alph_end"
+    },
+    "KAS": {
+      "coins": [
+        "ERG",
+        "ETC",
+        "IRON"
+      ],
+      "value": "--kas -o %pool_protocol:KAS%%pool_server:KAS%:%pool_port:KAS% -u %user:KAS% -p %password:KAS% --kas_end"
+    }
+  },
   "override_arguments": [
     {
       "coins": [
@@ -68,7 +87,6 @@
       "coins": [
         "KAS",
         "ALPH",
-        "IRON",
         "ETH",
         "ETC"
       ],

@@ -13,6 +13,7 @@
     "tls": "stratum+ssl://"
   },
   "arguments": "$ALGO --pool %pool_protocol%%pool_server%:%pool_port% --user %user% --pass %password% --apiport %api_port% --log off",
+  "dual_arguments": "$ALGO --pool %pool_protocol%%pool_server%:%pool_port% --user %user% --pass %password% $SECONDARY_ALGO --apiport %api_port% --log off",
   "multi_coin": true,
   "platforms": [
     "nvidia",
@@ -60,12 +61,35 @@
       "coins": [
         "CFX",
         "ERG",
+        "ETH",
         "ETC",
         "KLS",
         "IRON",
         "UBQ"
       ],
-      "arguments": "--dualmode SHA3XDUAL --dualpool %pool_protocol:XTM%%pool_server:XTM%:%pool_port:XTM% --dualuser %user:XTM%"
+      "value": "--dualmode SHA3XDUAL --dualpool %pool_protocol:XTM%%pool_server:XTM%:%pool_port:XTM% --dualuser %user:XTM%"
+    },
+    "ALPH": {
+      "coins": [
+        "ERG",
+        "ETH",
+        "ETC",
+        "KLS",
+        "IRON",
+        "UBQ"
+      ],
+      "value": "--dualmode ALEPHDUAL --dualpool %pool_protocol:ALPH%%pool_server:ALPH%:%pool_port:ALPH% --dualuser %user:ALPH%"
+    },
+    "RXD": {
+      "coins": [
+        "ERG",
+        "ETH",
+        "ETC",
+        "KLS",
+        "IRON",
+        "UBQ"
+      ],
+      "value": "--dualmode RXDDUAL --dualpool %pool_protocol:RXD%%pool_server:RXD%:%pool_port:RXD% --dualuser %user:RXD%"
     }
   },
   "override_platforms": [

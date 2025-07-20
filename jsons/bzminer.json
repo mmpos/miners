@@ -12,7 +12,8 @@
     "tcp": "stratum+tcp://",
     "tls": "stratum+ssl://"
   },
-  "arguments": "$ALGO -p %pool_protocol%%pool_server%:%pool_port% -w %wallet_address% -r %rig_name% --http_enabled 1 --http_port %api_port% --nc 1",
+  "arguments": "$ALGO -p %pool_protocol%%pool_server%:%pool_port% -w %wallet_address% -r %rig_name%%miner_id% --http_enabled 1 --http_port %api_port% --nc 1",
+  "dual_arguments": "$ALGO -p %pool_protocol%%pool_server%:%pool_port% -w %wallet_address% -r %rig_name%%miner_id% $SECONDARY_ALGO --http_enabled 1 --http_port %api_port% --nc 1",
   "multi_coin": true,
   "platforms": [
     "nvidia",
@@ -40,5 +41,27 @@
     "KLS": "-a karlsen",
     "ERG": "-a ergo",
     "NEOX": "-a neoxa"
+  },
+  "secondary_coins": {
+    "WART": {
+      "coins": [
+        "ERG",
+        "ETH",
+        "ETC",
+        "KLS",
+        "IRON"
+      ],
+      "value": "--a2 warthog --p2 %pool_protocol:WART%%pool_server:WART%:%pool_port:WART% --w2 %wallet_address:WART% --r2 %rig_name%%miner_id%"
+    },
+    "ALPH": {
+      "coins": [
+        "ERG",
+        "ETH",
+        "ETC",
+        "KLS",
+        "IRON"
+      ],
+      "value": "--a2 alph --p2 %pool_protocol:ALPH%%pool_server:ALPH%:%pool_port:ALPH% --w2 %wallet_address:ALPH% --r2 %rig_name%%miner_id%"
+    }
   }
 }
