@@ -9,9 +9,9 @@
   },
   "pool_protocol": {
     "tcp": "",
-    "tls": ""
+    "tls": "stratum+ssl://"
   },
-  "arguments": "$ALGO --stratum --daemon-address %pool_server% --port %pool_port% --wallet %user% --threads $(nproc) --broadcast --dev-fee 1",
+  "arguments": "$ALGO --stratum --daemon-address %pool_protocol%%pool_server% --port %pool_port% --wallet %user% --threads $(nproc) --broadcast --dev-fee 1",
   "platforms": [
     "cpu_amd",
     "cpu_intel",
@@ -22,9 +22,9 @@
   ],
   "api_port": 0,
   "coins": {
-    "DERO": "--dero",
-    "SPR": "--spectre",
-    "XEL": "--xelis",
+    "DERO": "--DERO",
+    "SPR": "--SPR",
+    "XEL": "--XEL",
     "XMR": "--randomx",
     "XTM": "--randomx",
     "ZEPH": "--randomx"
