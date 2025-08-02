@@ -21,7 +21,8 @@
   "coins": {
     "DNX": "-a dynex",
     "XEL": "-a xelis",
-    "CPAY": "-a cryptix"
+    "CPAY": "-a cryptix",
+    "QTC": "-a qhash"
   },
   "override_arguments": [
     {
