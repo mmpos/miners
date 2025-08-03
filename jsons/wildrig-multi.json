@@ -46,6 +46,7 @@
     "ZANO": "-a progpowz",
     "SERO": "-a progpow-sero",
     "VEIL": "-a progpow-veil",
-    "RTM": "-a ghostrider"
+    "RTM": "-a ghostrider",
+    "QTC": "-a qhash"
   }
 }
